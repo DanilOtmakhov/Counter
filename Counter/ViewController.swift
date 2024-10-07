@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    var counter: Int = 0
-    let dateFormatter = DateFormatter()
+final class ViewController: UIViewController {
+    private var counter: Int = 0
+    private let dateFormatter = DateFormatter()
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var changesText: UITextView!
     
