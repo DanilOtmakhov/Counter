@@ -104,8 +104,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="changesText" destination="CXf-aZ-PJH" id="RPY-Xi-vRp"/>
-                        <outlet property="counterLabel" destination="6lK-ci-NxR" id="Yrn-HE-PRS"/>
+                        <outlet property="changesTextUIView" destination="CXf-aZ-PJH" id="IOJ-oQ-jMx"/>
+                        <outlet property="counterUILabel" destination="6lK-ci-NxR" id="5wT-Jr-YUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

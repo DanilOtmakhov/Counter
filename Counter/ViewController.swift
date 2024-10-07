@@ -10,9 +10,8 @@ import UIKit
 final class ViewController: UIViewController {
     private var counter: Int = 0
     private let dateFormatter = DateFormatter()
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var changesText: UITextView!
-    
+    @IBOutlet weak var counterUILabel: UILabel!
+    @IBOutlet weak var changesTextUIView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormatter.dateFormat = "dd.MM.yyyy, HH:mm:ss"
@@ -22,30 +21,30 @@ final class ViewController: UIViewController {
     @IBAction func plusButtonDidTap() {
         let date = Date()
         counter += 1
-        counterLabel.text = "Значение счётчика: \(counter)"
-        changesText.text += "\n\(dateFormatter.string(from: date)): значение изменено на +1"
-        changesText.scrollRangeToVisible(changesText.selectedRange)
+        counterUILabel.text = "Значение счётчика: \(counter)"
+        changesTextUIView.text += "\n\(dateFormatter.string(from: date)): значение изменено на +1"
+        changesTextUIView.scrollRangeToVisible(changesTextUIView.selectedRange)
     }
     
     @IBAction func minusButtonDidTap() {
         let date = Date()
         if counter == 0 {
-            changesText.text += "\n\(dateFormatter.string(from: date)): попытка уменьшить значение счётчика ниже 0"
-            changesText.scrollRangeToVisible(changesText.selectedRange)
+            changesTextUIView.text += "\n\(dateFormatter.string(from: date)): попытка уменьшить значение счётчика ниже 0"
+            changesTextUIView.scrollRangeToVisible(changesTextUIView.selectedRange)
             return
         }
         counter -= 1
-        counterLabel.text = "Значение счётчика: \(counter)"
-        changesText.text += "\n\(dateFormatter.string(from: date)): значение изменено на -1"
-        changesText.scrollRangeToVisible(changesText.selectedRange)
+        counterUILabel.text = "Значение счётчика: \(counter)"
+        changesTextUIView.text += "\n\(dateFormatter.string(from: date)): значение изменено на -1"
+        changesTextUIView.scrollRangeToVisible(changesTextUIView.selectedRange)
     }
     
     @IBAction func resetButtonDidTap() {
         let date = Date()
         counter = 0
-        counterLabel.text = "Значение счётчика: \(counter)"
-        changesText.text += "\n\(dateFormatter.string(from: date)): значение сброшено"
-        changesText.scrollRangeToVisible(changesText.selectedRange)
+        counterUILabel.text = "Значение счётчика: \(counter)"
+        changesTextUIView.text += "\n\(dateFormatter.string(from: date)): значение сброшено"
+        changesTextUIView.scrollRangeToVisible(changesTextUIView.selectedRange)
     }
 }
 
