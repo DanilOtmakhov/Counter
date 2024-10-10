@@ -10,15 +10,16 @@ import UIKit
 final class ViewController: UIViewController {
     private var counter: Int = 0
     private let dateFormatter = DateFormatter()
-    @IBOutlet weak var counterUILabel: UILabel!
-    @IBOutlet weak var changesTextUIView: UITextView!
+    @IBOutlet weak private var counterUILabel: UILabel!
+    @IBOutlet weak private var changesTextUIView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormatter.dateFormat = "dd.MM.yyyy, HH:mm:ss"
         
     }
     
-    @IBAction func plusButtonDidTap() {
+    @IBAction private func plusButtonDidTap() {
         let date = Date()
         counter += 1
         counterUILabel.text = "Значение счётчика: \(counter)"
@@ -26,7 +27,7 @@ final class ViewController: UIViewController {
         changesTextUIView.scrollRangeToVisible(changesTextUIView.selectedRange)
     }
     
-    @IBAction func minusButtonDidTap() {
+    @IBAction private func minusButtonDidTap() {
         let date = Date()
         if counter == 0 {
             changesTextUIView.text += "\n\(dateFormatter.string(from: date)): попытка уменьшить значение счётчика ниже 0"
@@ -39,7 +40,7 @@ final class ViewController: UIViewController {
         changesTextUIView.scrollRangeToVisible(changesTextUIView.selectedRange)
     }
     
-    @IBAction func resetButtonDidTap() {
+    @IBAction private func resetButtonDidTap() {
         let date = Date()
         counter = 0
         counterUILabel.text = "Значение счётчика: \(counter)"
