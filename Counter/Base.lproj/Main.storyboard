@@ -16,36 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="DSA-oj-FV5">
-                                <rect key="frame" x="38" y="78" width="317" height="721"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DSA-oj-FV5">
+                                <rect key="frame" x="20" y="79" width="353" height="719"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-ci-NxR">
-                                        <rect key="frame" x="0.0" y="0.0" width="317" height="34.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.666666666666664"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменений:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-aZ-PJH">
-                                        <rect key="frame" x="0.0" y="63.666666666666629" width="317" height="416"/>
+                                        <rect key="frame" x="0.0" y="54.666666666666657" width="353" height="464.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="416" id="7Q6-0E-jJW"/>
-                                            <constraint firstAttribute="width" constant="309" id="nKW-Gh-Rn4"/>
-                                        </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="h9g-C3-Wbn">
-                                        <rect key="frame" x="0.0" y="508.66666666666663" width="317" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h9g-C3-Wbn">
+                                        <rect key="frame" x="0.0" y="539" width="353" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zar-yk-u7e">
-                                                <rect key="frame" x="0.0" y="0.0" width="148" height="110"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="110" id="icd-7p-yEW"/>
-                                                    <constraint firstAttribute="width" constant="140" id="pHG-ab-WqJ"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="100"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
@@ -56,11 +48,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOf-nT-gPW">
-                                                <rect key="frame" x="177" y="0.0" width="140" height="110"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="FR2-p7-GDr"/>
-                                                    <constraint firstAttribute="height" constant="110" id="wp2-UE-qmI"/>
-                                                </constraints>
+                                                <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="100"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
@@ -72,11 +60,15 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="fOf-nT-gPW" firstAttribute="leading" secondItem="Zar-yk-u7e" secondAttribute="trailing" constant="29" id="iDE-wx-6Oo"/>
+                                            <constraint firstItem="Zar-yk-u7e" firstAttribute="width" secondItem="fOf-nT-gPW" secondAttribute="width" id="7U2-Sd-fec"/>
+                                            <constraint firstAttribute="height" constant="100" id="TFo-0J-a5f"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqV-Gs-ajN">
-                                        <rect key="frame" x="0.0" y="647.66666666666663" width="317" height="73.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="659" width="353" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Acl-vT-DHW"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="arrow.trianglehead.counterclockwise" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
@@ -88,19 +80,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DSA-oj-FV5" secondAttribute="height" multiplier="309:703" id="05I-zD-j6X"/>
-                                    <constraint firstAttribute="width" secondItem="DSA-oj-FV5" secondAttribute="height" multiplier="309:703" id="1iw-rk-KBv"/>
-                                    <constraint firstAttribute="width" constant="309" id="cjR-Eg-K69"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DSA-oj-FV5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5DA-lu-q7Z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DSA-oj-FV5" secondAttribute="bottom" constant="19" id="fhN-lE-33m"/>
-                            <constraint firstItem="DSA-oj-FV5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="h4z-mZ-muM"/>
+                            <constraint firstItem="DSA-oj-FV5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V7O-hm-gtu"/>
+                            <constraint firstItem="DSA-oj-FV5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="YUc-Cg-L6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DSA-oj-FV5" secondAttribute="bottom" constant="20" id="evH-sE-kKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DSA-oj-FV5" secondAttribute="trailing" constant="20" id="z1n-uL-qPE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -110,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1309" y="-56"/>
+            <point key="canvasLocation" x="-882" y="-301"/>
         </scene>
     </scenes>
     <resources>
